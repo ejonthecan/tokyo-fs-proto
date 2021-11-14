@@ -390,7 +390,7 @@ main {
   justify-content: space-evenly;
 
   /* top | right | bottom | left */
-  padding: 100px auto 100px auto;
+  padding: 100px 0 100px 0;
   border: none;
   /* top | right | bottom | left */
   margin: 100px auto 100px auto;
@@ -438,7 +438,7 @@ main {
   display: flex;
   flex-direction: row;
   /* top | right | bottom | left */
-  padding: 100px auto 100px auto;
+  padding: 100px 0 100px 0;
   border: none;
   /* top | right | bottom | left */
   margin: 100px auto 0 auto;
@@ -567,14 +567,14 @@ main {
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
-  width:100%
+  width: 100%;
   min-height: 100vh;
 }
 
 .featureExperiencesHeader {
   text-align: center;
   /* top | right | bottom | left */
-  padding: 100px auto 100px auto;
+  padding: 100px 0 100px 0;
   border: none;
   /* top | right | bottom | left */
   margin: 100px auto 50px auto;
@@ -583,7 +583,7 @@ main {
 .featureExperiencesHeader h2 {
   font-size: 24px;
   font-style: normal;
-  font-weight: 200px;
+  font-weight: 200;
 }
 
 .featureExperiences {
@@ -630,18 +630,18 @@ main {
   background: rgb(255, 255, 255);
   max-width: 50%;
   min-height: 100vh;
- 
 }
-.featureCarouselText #featureExpHead, #featureExpTxt {
+.featureCarouselText #featureExpHead,
+#featureExpTxt {
   display: block;
   box-sizing: border-box;
 
-/* top | right | bottom | left */
-margin: 1rem 10rem 1rem 5rem;
-border: 0;
-/* top | right | bottom | left */
-padding: 1rem 10rem 1rem 5rem;
-width: 65%;
+  /* top | right | bottom | left */
+  margin: 1rem 10rem 1rem 5rem;
+  border: 0;
+  /* top | right | bottom | left */
+  padding: 1rem 10rem 1rem 5rem;
+  width: 65%;
 }
 
 .featureCarouselText #featureExpHead {
@@ -775,7 +775,7 @@ width: 65%;
   font-size: 7rem;
   font-weight: 400;
   font-style: italic;
-  letter-spacing: -0.5;
+  letter-spacing: 0.5rem;
   line-height: 9rem;
   font-family: "Monotype Garamond", "Garamond", "serif";
   /* top | right | bottom | left */
@@ -873,8 +873,6 @@ width: 65%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
- 
-  
 }
 
 .socialCard {
@@ -885,8 +883,8 @@ width: 65%;
   background-color: blue;
   width: 15%;
   min-height: 20rem;
-/* vertical | horizontal */
-margin: 3rem 1.5rem;
+  /* vertical | horizontal */
+  margin: 3rem 1.5rem;
 }
 
 .SC-1 {
@@ -898,5 +896,3 @@ margin: 3rem 1.5rem;
 .SC-3 {
   background-image: url("images/MAR_ugc_cliffclf.jpg");
 }
-
-
