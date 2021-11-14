@@ -637,10 +637,10 @@ main {
   box-sizing: border-box;
 
 /* top | right | bottom | left */
-margin: 2rem 10rem 0rem 5rem;
+margin: 1rem 10rem 1rem 5rem;
 border: 0;
 /* top | right | bottom | left */
-padding: 2rem 10rem 2rem 5rem;
+padding: 1rem 10rem 1rem 5rem;
 width: 65%;
 }
 
