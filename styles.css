@@ -628,23 +628,13 @@ main {
   box-sizing: border-box;
   width: 90vw;
 }
-@media (min-width: 900px) {
-  .featureDining {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-}
 
 .featurediningHeadline {
-  display: block;
-
   /* top | right | bottom | left */
-  margin: 5rem 15rem 0rem 15rem;
+  margin: 5rem 10rem 0rem 15rem;
   border: 0;
   /* top | right | bottom | left */
-  padding: 0rem 15rem 0rem 2rem;
+  padding: 0rem 10rem 0rem 2rem;
 }
 
 .featurediningHeadline h2 {
@@ -700,55 +690,76 @@ main {
   display: flex;
   box-sizing: border-box;
   flex-wrap: wrap;
-  flex-flow: column-reverse;
+  flex-flow: column;
   text-align: center;
   align-items: center;
-  position: relative;
-}
-
-.featureEmployee #overlay:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgb(0, 0, 0, 0.6);
-  opacity: 0;
-  transition: all 0.5s;
-}
-
-.feature-employeeImage {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100vw;
   min-height: 100vh;
-}
-
-.employee1 {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.768),
-      rgba(255, 255, 255, 0.001)
-    ),
-    url("images/MAR_1203_original.jpg");
-  z-index: 50;
+  margin-top: 30rem;
+  margin-bottom: 20rem;
 }
 
 .feature-employeeQuote {
-  display: inline-block;
+  display: block;
+  position: relative;
+  z-index: 50;
+}
+.feature-employeeQuote > * {
+  z-index: 10;
+  position: relative;
 }
 
-.feature-employeeQuote p {
-  font-size: 5rem;
+.feature-employeeQuote::after {
+  content: "";
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.898),
+      rgba(255, 255, 255, 0.001)
+    ),
+    url("images/MAR_1203_original.jpg");
+  width: 100%;
+  min-height: 100em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.quoteblock p {
+  font-size: 7rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: -0.5;
+  line-height: 9rem;
   font-family: "Monotype Garamond", "Garamond", "serif";
   /* top | right | bottom | left */
-  margin: 10rem 16rem 0rem 16rem;
+  margin: -28rem 8rem 0rem 8rem;
   border: 0;
   /* top | right | bottom | left */
-  padding: 10rem 16rem 0rem 16rem;
+  padding: 11rem 10rem 0rem 10rem;
+  z-index: 2;
+}
+
+.quoteblock .position {
+  font-family: "Monotype Garamond", "Garamond", "serif";
+  font-weight: 400;
+}
+.quoteblock {
+  font-size: 1em;
+}
+
+.moreexperiencesbutton {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  justify-self: center;
+  align-self: center;
+  flex: 0 1;
+  margin: 5rem 5rem;
+  border: 0;
+  padding: 5rem;
 }
