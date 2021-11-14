@@ -71,7 +71,7 @@ header {
 .topNav {
   color: white;
   display: flex;
-  box-sizing: border-box;
+
   font-style: normal;
   line-height: 13px;
   column-gap: 15px;
@@ -566,12 +566,9 @@ main {
   padding: 0;
   box-sizing: border-box;
   display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  max-width: 100%;
-  min-width: 100%;
-  max-height: 100%;
-  min-height: 100%;
+  flex-flow: row wrap;
+  width:100%
+  min-height: 100vh;
 }
 
 .featureExperiencesHeader {
@@ -604,19 +601,64 @@ main {
 }
 
 .featureCarouselImage {
+  flex-wrap: wrap;
   background: red;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   max-width: 50%;
-  max-height: 100%;
+  min-height: 100vh;
   flex: 1;
   margin: 0;
 }
+.f-image1 {
+  background-image: url("images/MAR_890_original.jpg");
+}
+.f-image2 {
+  background-image: url("images/MAR_849_original.jpg");
+}
+.f-image3 {
+  background-image: url("images/MAR_837_original.jpg");
+}
 
 .featureCarouselText {
-  background: rgb(111, 0, 255);
-  max-width: 50%;
-  max-height: 100%;
+  display: flex;
+  flex-flow: column wrap;
   flex: 1;
-  margin: 0;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgb(255, 255, 255);
+  max-width: 50%;
+  min-height: 100vh;
+ 
+}
+.featureCarouselText #featureExpHead, #featureExpTxt {
+  display: block;
+  box-sizing: border-box;
+
+/* top | right | bottom | left */
+margin: 2rem 10rem 0rem 5rem;
+border: 0;
+/* top | right | bottom | left */
+padding: 2rem 10rem 2rem 5rem;
+width: 65%;
+}
+
+.featureCarouselText #featureExpHead {
+  font-family: "Neue Helvetica", "Helvetica", "sans-serif";
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.featureCarouselText #featureExpTxt {
+  font-family: "Monotype Garamond", "Garamond", "serif";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
 }
 
 .featureDining {
@@ -717,8 +759,8 @@ main {
   background-repeat: no-repeat;
   background-image: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.898),
-      rgba(255, 255, 255, 0.001)
+      rgba(255, 255, 255, 3),
+      rgba(255, 255, 255, 0.118)
     ),
     url("images/MAR_1203_original.jpg");
   width: 100%;
@@ -737,7 +779,7 @@ main {
   line-height: 9rem;
   font-family: "Monotype Garamond", "Garamond", "serif";
   /* top | right | bottom | left */
-  margin: -28rem 8rem 0rem 8rem;
+  margin: -20rem 8rem 0rem 8rem;
   border: 0;
   /* top | right | bottom | left */
   padding: 11rem 10rem 0rem 10rem;
@@ -752,14 +794,109 @@ main {
   font-size: 1em;
 }
 
-.moreexperiencesbutton {
+.moreExperiences {
   display: flex;
   flex-direction: row;
-  flex-flow: row;
-  justify-self: center;
-  align-self: center;
-  flex: 0 1;
-  margin: 5rem 5rem;
-  border: 0;
-  padding: 5rem;
+  justify-content: center;
+  margin: 2rem 2rem;
+  padding: 2rem;
 }
+
+.moreExperiences #experienceButton {
+  display: block;
+  box-sizing: border-box;
+  padding: 1em;
+  border: 0.1rem solid black;
+  margin: 1em;
+  width: 11%;
+  font-family: "Neue Helvetica", Helvetica, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 10px;
+  text-transform: uppercase;
+  justify-content: center;
+  background-color: white;
+  cursor: pointer;
+
+  transition: all 0.3s ease 0s;
+}
+
+.moreExperiences #experienceButton p {
+  text-decoration: none;
+}
+.moreExperiences #experienceButton:hover {
+  background-color: black;
+  color: white;
+  border: 0.1rem solid white;
+}
+
+.socialFeed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  margin: 2em;
+  border: 0;
+  padding: 2em;
+}
+
+.socialHeader h2 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: 1rem;
+  line-height: 2rem;
+
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  border: 0;
+  padding: 2rem;
+}
+
+.socialText p {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Monotype Garamond", "Garamond", "serif";
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+
+  margin: 2rem 2rem;
+  border: 0;
+  padding: 2rem;
+}
+
+.socialcardContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+ 
+  
+}
+
+.socialCard {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-color: blue;
+  width: 15%;
+  min-height: 20rem;
+/* vertical | horizontal */
+margin: 3rem 1.5rem;
+}
+
+.SC-1 {
+  background-image: url("images/MAR_UGC_missa_bridalac.jpg");
+}
+.SC-2 {
+  background-image: url("images/MAR_UGC_konnicheewah.jpg");
+}
+.SC-3 {
+  background-image: url("images/MAR_ugc_cliffclf.jpg");
+}
+
+
